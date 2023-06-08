@@ -1,0 +1,270 @@
+$clr-accent: #262f5e;
+$clr-light-gray: #deeff1;
+$clr-text-gray: #7ab699;
+$clr-text-blue: #9094ab;
+$clr-ursa-red: #ea4740;
+
+$sm: 480px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+
+$ff-primary: 'chevin_promedium', sans-serif;
+
+@font-face {
+  font-family: 'chevin_probold';
+  src: url('/fonts/g-type_-_chevinpro-bold-webfont.woff2') format('woff2'),
+    url('/fonts/g-type_-_chevinpro-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_probold_italic';
+  src: url('/fonts/g-type_-_chevinpro-bolditalic-webfont.woff2') format('woff2'),
+    url('/fonts/g-type_-_chevinpro-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_prodemibold';
+  src: url('/fonts/g-type_-_chevinpro-demibold-webfont.woff2') format('woff2'),
+    url('/fonts/g-type_-_chevinpro-demibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_prodemibold_italic';
+  src: url('/fonts/g-type_-_chevinpro-demibolditalic-webfont.woff2')
+      format('woff2'),
+    url('/fonts/g-type_-_chevinpro-demibolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_proextrabold';
+  src: url('/fonts/g-type_-_chevinpro-extrabold-webfont.woff2') format('woff2'),
+    url('/fonts/g-type_-_chevinpro-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_proextrabold_italic';
+  src: url('/fonts/g-type_-_chevinpro-extrabolditalic-webfont.woff2')
+      format('woff2'),
+    url('/fonts/g-type_-_chevinpro-extrabolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_prolight';
+  src: url('/fonts/g-type_-_chevinpro-light-webfont.woff2') format('woff2'),
+    url('/fonts/g-type_-_chevinpro-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_prolight_italic';
+  src: url('/fonts/g-type_-_chevinpro-lightitalic-webfont.woff2')
+      format('woff2'),
+    url('/fonts/g-type_-_chevinpro-lightitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_promedium';
+  src: url('/fonts/g-type_-_chevinpro-medium-webfont.woff2') format('woff2'),
+    url('/fonts/g-type_-_chevinpro-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_promedium_italic';
+  src: url('/fonts/g-type_-_chevinpro-mediumitalic-webfont.woff2')
+      format('woff2'),
+    url('/fonts/g-type_-_chevinpro-mediumitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_prothin';
+  src: url('/fonts/g-type_-_chevinpro-thin-webfont.woff2') format('woff2'),
+    url('/fonts/g-type_-_chevinpro-thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevin_prothin_italic';
+  src: url('/fonts/g-type_-_chevinpro-thinitalic-webfont.woff2') format('woff2'),
+    url('/fonts/g-type_-_chevinpro-thinitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-Bold.eot');
+//   src: local('Chevin Pro Bold'), local('ChevinPro-Bold'),
+//     url('/fonts/ChevinPro-Bold.eot?#iefix') format('embedded-opentype'),
+//     url('/fonts/ChevinPro-Bold.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-Bold.woff') format('woff'),
+//     url('/fonts/ChevinPro-Bold.ttf') format('truetype');
+//   font-weight: bold;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-BoldItalic.eot');
+//   src: local('Chevin Pro Bold Italic'), local('ChevinPro-BoldItalic'),
+//     url('/fonts/ChevinPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+//     url('/fonts/ChevinPro-BoldItalic.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-BoldItalic.woff') format('woff'),
+//     url('/fonts/ChevinPro-BoldItalic.ttf') format('truetype');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-DemiBold.eot');
+//   src: local('Chevin Pro DemiBold'), local('ChevinPro-DemiBold'),
+//     url('/fonts/ChevinPro-DemiBold.eot?#iefix') format('embedded-opentype'),
+//     url('/fonts/ChevinPro-DemiBold.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-DemiBold.woff') format('woff'),
+//     url('/fonts/ChevinPro-DemiBold.ttf') format('truetype');
+//   font-weight: 600;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-DemiBoldItalic.eot');
+//   src: local('Chevin Pro DemiBold Italic'), local('ChevinPro-DemiBoldItalic'),
+//     url('/fonts/ChevinPro-DemiBoldItalic.eot?#iefix')
+//       format('embedded-opentype'),
+//     url('/fonts/ChevinPro-DemiBoldItalic.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-DemiBoldItalic.woff') format('woff'),
+//     url('/fonts/ChevinPro-DemiBoldItalic.ttf') format('truetype');
+//   font-weight: 600;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-ExtraBoldItalic.eot');
+//   src: local('Chevin Pro ExtraBold Italic'), local('ChevinPro-ExtraBoldItalic'),
+//     url('/fonts/ChevinPro-ExtraBoldItalic.eot?#iefix')
+//       format('embedded-opentype'),
+//     url('/fonts/ChevinPro-ExtraBoldItalic.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-ExtraBoldItalic.woff') format('woff'),
+//     url('/fonts/ChevinPro-ExtraBoldItalic.ttf') format('truetype');
+//   font-weight: bold;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-ExtraBold.eot');
+//   src: local('/fonts/Chevin Pro ExtraBold'), local('ChevinPro-ExtraBold'),
+//     url('/fonts/ChevinPro-ExtraBold.eot?#iefix') format('embedded-opentype'),
+//     url('/fonts/ChevinPro-ExtraBold.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-ExtraBold.woff') format('woff'),
+//     url('/fonts/ChevinPro-ExtraBold.ttf') format('truetype');
+//   font-weight: bold;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-Light.eot');
+//   src: local('Chevin Pro Light'), local('ChevinPro-Light'),
+//     url('/fonts/ChevinPro-Light.eot?#iefix') format('embedded-opentype'),
+//     url('/fonts/ChevinPro-Light.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-Light.woff') format('woff'),
+//     url('/fonts/ChevinPro-Light.ttf') format('truetype');
+//   font-weight: 300;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-LightItalic.eot');
+//   src: local('Chevin Pro Light Italic'), local('ChevinPro-LightItalic'),
+//     url('/fonts/ChevinPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+//     url('/fonts/ChevinPro-LightItalic.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-LightItalic.woff') format('woff'),
+//     url('/fonts/ChevinPro-LightItalic.ttf') format('truetype');
+//   font-weight: 300;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-Medium.eot');
+//   src: local('Chevin Pro Medium'), local('ChevinPro-Medium'),
+//     url('/fonts/ChevinPro-Medium.eot?#iefix') format('embedded-opentype'),
+//     url('/fonts/ChevinPro-Medium.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-Medium.woff') format('woff'),
+//     url('/fonts/ChevinPro-Medium.ttf') format('truetype');
+//   font-weight: 500;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-MediumItalic.eot');
+//   src: local('Chevin Pro Medium Italic'), local('ChevinPro-MediumItalic'),
+//     url('/fonts/ChevinPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+//     url('/fonts/ChevinPro-MediumItalic.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-MediumItalic.woff') format('woff'),
+//     url('/fonts/ChevinPro-MediumItalic.ttf') format('truetype');
+//   font-weight: 500;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-ThinItalic.eot');
+//   src: local('Chevin Pro Thin Italic'), local('ChevinPro-ThinItalic'),
+//     url('/fonts/ChevinPro-ThinItalic.eot?#iefix') format('embedded-opentype'),
+//     url('/fonts/ChevinPro-ThinItalic.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-ThinItalic.woff') format('woff'),
+//     url('/fonts/ChevinPro-ThinItalic.ttf') format('truetype');
+//   font-weight: 100;
+//   font-style: italic;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Chevin Pro';
+//   src: url('/fonts/ChevinPro-Thin.eot');
+//   src: local('Chevin Pro Thin'), local('ChevinPro-Thin'),
+//     url('/fonts/ChevinPro-Thin.eot?#iefix') format('embedded-opentype'),
+//     url('/fonts/ChevinPro-Thin.woff2') format('woff2'),
+//     url('/fonts/ChevinPro-Thin.woff') format('woff'),
+//     url('/fonts/ChevinPro-Thin.ttf') format('truetype');
+//   font-weight: 100;
+//   font-style: normal;
+//   font-display: swap;
+// }

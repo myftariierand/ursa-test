@@ -1,0 +1,106 @@
+@import 'styles/variables';
+
+@mixin flex($justify: null, $align: null, $gap: null, $direction: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin floatingLabelInput {
+  align-self: center;
+  display: flex;
+  position: relative;
+  border: 0;
+  border-bottom: 1px solid $clr-light-gray;
+  padding-bottom: 0.8rem;
+  width: 280px;
+
+  input {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $clr-accent;
+    width: 100%;
+
+    &::placeholder {
+      color: #9094ab;
+    }
+  }
+
+  input:focus ~ label,
+  textarea:focus ~ label,
+  input:not(:placeholder-shown) ~ label,
+  textarea:not(:placeholder-shown) ~ label {
+    top: -25px;
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #9094ab;
+    pointer-events: none;
+    transition: top 100ms ease-in-out;
+  }
+
+  span {
+    position: absolute;
+    bottom: -25px;
+    font-size: 1.3rem;
+    color: red;
+  }
+}
+
+@mixin checkbox {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  input {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    margin-right: 1.6rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $clr-accent;
+      border-radius: 3px;
+    }
+
+    &:checked {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-color: $clr-accent;
+        border: 1px solid $clr-accent;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  label {
+    font-size: 1.5rem;
+    color: $clr-text-blue;
+
+    a {
+      color: $clr-accent;
+    }
+  }
+}

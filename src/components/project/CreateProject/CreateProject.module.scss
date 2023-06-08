@@ -1,0 +1,160 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.project {
+  height: calc(100vh - 30px - 90px - 30px);
+  display: grid;
+  place-items: center;
+
+  &__container {
+    @include flex($direction: column);
+
+    h1 {
+      margin-bottom: 2.4rem;
+      color: $clr-accent;
+      text-align: center;
+    }
+
+    h5 {
+      margin-bottom: 3rem;
+      color: $clr-text-gray;
+    }
+  }
+
+  .projects__container {
+    margin-bottom: 6.5rem;
+
+    span {
+      color: red;
+    }
+  }
+
+  &__layers {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 2.4rem;
+
+    .field {
+      align-self: center;
+      display: flex;
+      position: relative;
+      width: 280px;
+      border: 0;
+      border-bottom: 1px solid $clr-light-gray;
+      padding-bottom: 0.8rem;
+
+      input {
+        border: 0;
+        outline: 0;
+        padding: 0;
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $clr-accent;
+        background-color: transparent;
+        width: 100%;
+
+        &::placeholder {
+          color: #9094ab;
+        }
+      }
+
+      input:focus ~ label,
+      input:not(:placeholder-shown) ~ label {
+        top: -25px;
+        font-size: 1.3rem;
+      }
+
+      label {
+        position: absolute;
+        top: 0;
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: #9094ab;
+        pointer-events: none;
+        transition: all 100ms ease-in-out;
+      }
+
+      span {
+        position: absolute;
+        bottom: -25px;
+        font-size: 1.3rem;
+        color: red;
+      }
+    }
+
+    & > button {
+      position: relative;
+      justify-self: end;
+    }
+  }
+}
+
+.main__item {
+  position: absolute;
+  bottom: 0px;
+  background-color: #262f5e;
+  width: 100%;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
+
+.animated__background {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #262f5e;
+  background: linear-gradient(to right, #262f5e 8%, #fff 18%, #262f5e 33%);
+  background-size: 800px 104px;
+  height: 7px;
+  position: relative;
+}
+
+@media screen and (max-width: $lg) {
+  .project {
+    &__details {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 5rem;
+
+      button {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .project {
+    height: auto;
+
+    &__layers {
+      flex-direction: column;
+    }
+
+    &__details {
+      grid-template-columns: 1fr;
+      margin-bottom: 4rem;
+
+      button {
+        margin-top: -2rem;
+        justify-self: center;
+        width: 100%;
+      }
+    }
+  }
+}

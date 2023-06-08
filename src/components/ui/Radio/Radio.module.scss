@@ -1,0 +1,53 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.radio {
+  margin-bottom: 3rem;
+
+  p {
+    margin-bottom: 1.2rem;
+    color: $clr-text-blue;
+  }
+
+  &__container {
+    @include flex($gap: 4rem);
+
+    fieldset {
+      @include flex($align: center, $gap: 1.2rem);
+
+      input {
+        appearance: none;
+        position: relative;
+        width: 28px;
+        height: 28px;
+        border: 2px solid $clr-light-gray;
+        border-radius: 50%;
+
+        &:checked {
+          border-color: $clr-accent;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: $clr-accent;
+          }
+        }
+
+        &:checked + label {
+          color: $clr-accent;
+        }
+      }
+
+      label {
+        font-size: 1.8rem;
+        color: $clr-text-blue;
+      }
+    }
+  }
+}

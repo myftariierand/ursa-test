@@ -1,0 +1,35 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.button {
+  @include flex(center, center, 1.6rem);
+  padding: 1.2rem 2.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  span {
+    margin-right: 1.6rem;
+  }
+}
+
+.primary {
+  color: #fff;
+  background-color: $clr-accent;
+  border: 0;
+}
+
+.transparent {
+  width: 100%;
+  max-width: 170px;
+  color: $clr-accent;
+  border: 1px solid $clr-accent;
+  background-color: transparent;
+
+  svg {
+    path {
+      fill: $clr-accent;
+    }
+  }
+}

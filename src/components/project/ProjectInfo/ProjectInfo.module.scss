@@ -1,0 +1,163 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.project {
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+
+  & > a {
+    display: block;
+    margin-top: 1rem;
+    color: $clr-accent;
+    font-weight: 600;
+    transition: color 150ms ease-in-out;
+
+    &:hover {
+      color: #ea4740;
+    }
+  }
+
+  &__name,
+  &__info {
+    background-color: $clr-light-gray;
+  }
+
+  &__name {
+    margin-bottom: 0.8rem;
+    padding: 1.6rem 0;
+
+    h3 {
+      color: $clr-accent;
+    }
+  }
+
+  &__info {
+    display: grid;
+    place-content: center;
+    padding: 3.2rem 0;
+
+    div:first-of-type {
+      p {
+        margin-bottom: 2.4rem;
+        font-size: 2.1rem;
+      }
+
+      h1 {
+        font-size: 5.6rem;
+        margin-bottom: 0.8rem;
+        color: $clr-accent;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 7.2rem;
+        font-size: 1.7rem;
+        color: $clr-accent;
+      }
+    }
+
+    div:last-of-type {
+      p {
+        font-size: 2.1rem;
+
+        &:first-of-type {
+          margin-bottom: 1.2rem;
+        }
+
+        &:not(:last-of-type) {
+          color: $clr-text-blue;
+        }
+
+        &:last-of-type {
+          color: $clr-accent;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__error {
+    margin-top: 0.8rem;
+    padding: 1.6rem 0;
+    background-color: #ea4740;
+    color: #fff;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: $md) {
+  .project {
+    &__name {
+      div {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .project {
+    max-width: unset;
+    background-color: #fff;
+
+    &__name {
+      @include flex(space-between, center);
+      padding: 1rem;
+      box-shadow: 0 0 0 100vmax $clr-light-gray;
+      clip-path: inset(0 -100vmax);
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      div {
+        p {
+          &:not(:last-of-type) {
+            color: $clr-text-blue;
+          }
+
+          &:last-of-type {
+            color: $clr-accent;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &__info {
+      @include flex(center);
+      align-items: center;
+      background-color: #fff;
+      padding: 0;
+
+      div:first-of-type {
+        p {
+          margin: 0;
+        }
+
+        h1 {
+          font-size: 4rem;
+          margin-bottom: 0.5rem;
+        }
+
+        span {
+          margin: 0;
+        }
+      }
+
+      div:last-of-type {
+        display: none;
+      }
+    }
+
+    &__error {
+      box-shadow: 0 0 0 100vmax #ea4740;
+      clip-path: inset(0 -100vmax);
+      padding: 1rem 0;
+    }
+  }
+}

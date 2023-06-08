@@ -1,0 +1,39 @@
+@import 'styles/variables';
+
+.calculator {
+  min-height: calc(100vh - 30px - 90px - 30px);
+  padding-top: 3rem;
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 5rem;
+  }
+
+  &__step {
+    & > p {
+      margin-bottom: 3.5rem;
+      color: $clr-text-blue;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .calculator {
+    &__main {
+      grid-template-columns: 1fr;
+
+      & > div {
+        order: 1;
+
+        margin-bottom: 4rem;
+      }
+
+      aside {
+        top: 0;
+        position: sticky;
+        order: 0;
+      }
+    }
+  }
+}

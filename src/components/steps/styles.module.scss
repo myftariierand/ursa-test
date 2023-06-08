@@ -1,0 +1,29 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.title {
+  @include flex(space-between, center);
+
+  span {
+    color: $clr-text-blue;
+    font-size: 2.5rem;
+  }
+}
+
+.otherMaterial {
+  display: block;
+  cursor: pointer;
+  color: #7ab699;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: -1.5rem;
+  margin-bottom: 2.4rem;
+}
+
+@media screen and (min-width: $lg) {
+  .title {
+    span {
+      display: none;
+    }
+  }
+}

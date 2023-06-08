@@ -1,0 +1,13 @@
+.test {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  background: #7ab699;
+  color: #fff;
+  font-size: 15px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

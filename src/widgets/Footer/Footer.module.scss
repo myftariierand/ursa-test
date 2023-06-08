@@ -1,0 +1,33 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.footer {
+  background-color: $clr-accent;
+  padding: 0 2rem;
+
+  &__container {
+    height: 30px;
+    display: grid;
+    place-content: center;
+
+    p {
+      color: #c5c6d1;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+  }
+}
+
+@media screen and (max-width: $md) {
+  .footer {
+    padding: 1rem 2rem;
+
+    &__container {
+      height: auto;
+
+      p {
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
